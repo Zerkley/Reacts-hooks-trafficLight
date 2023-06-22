@@ -1,26 +1,28 @@
 import React from "react";
-
-//include images into your bundle
-import rigoImage from "../../img/rigo-baby.jpg";
+import RedLight from "./redLight";
+import YellowLight from "./yellowLight";
+import GreenLight from "./greenLight";
 
 //create your first component
 const Home = () => {
-	return (
-		<div className="text-center">
-			<h1 className="text-center mt-5">Hello Rigo!</h1>
-			<p>
-				<img src={rigoImage} />
-			</p>
-			<a href="#" className="btn btn-success">
-				If you see this green button... bootstrap is working...
-			</a>
-			<p>
-				Made by{" "}
-				<a href="http://www.4geeksacademy.com">4Geeks Academy</a>, with
-				love!
-			</p>
-		</div>
-	);
+  return (
+    <div>
+      <div
+        className="container d-flex flex-column bg-black"
+        style={{ width: "1rem", height: "15rem" }}
+      >
+        iii
+      </div>
+      <div
+        className="container d-flex flex-column justify-content-center bg-black"
+        style={{ width: "9rem", height: "20rem" }}
+      >
+        <RedLight />
+        <YellowLight />
+        <GreenLight />
+      </div>
+    </div>
+  );
 };
 
 export default Home;
