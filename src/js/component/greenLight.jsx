@@ -11,7 +11,7 @@ const GreenLight = () => {
 
   return (
     <button
-      className="GreenLight glow rounded-circle mx-4 my-2"
+      className={`GreenLight ${glow} rounded-circle mx-4 my-2`}
       id="greenLight"
       style={{ width: "5rem", height: "5rem" }}
       onClick={greenClick}

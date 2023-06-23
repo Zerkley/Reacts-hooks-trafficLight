@@ -1,14 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 
 const YellowLight = () => {
-  let glow = null;
+  const [glow, setGlow] = useState("null");
 
   const yellowClick = () => {
-    glow = "selected";
+    setGlow("selected");
+    console.log(glow);
   };
   return (
     <button
-      className="YellowLight rounded-circle mx-4 my-2"
+      className={`YellowLight ${glow} rounded-circle mx-4 my-2`}
       id="yellowLight"
       style={{ width: "5rem", height: "5rem" }}
       onClick={yellowClick}

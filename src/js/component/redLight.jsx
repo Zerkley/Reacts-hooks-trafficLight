@@ -1,14 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 
 const RedLight = () => {
-  let glow = null;
+  const [glow, setGlow] = useState("null");
 
   const redClick = () => {
-    glow = "selected";
+    setGlow("selected");
   };
   return (
     <button
-      className="RedLight rounded-circle mx-4 my-2"
+      className={`RedLight ${glow} rounded-circle mx-4 my-2`}
       id="redLight"
       style={{ width: "5rem", height: "5rem" }}
       onClick={redClick}
